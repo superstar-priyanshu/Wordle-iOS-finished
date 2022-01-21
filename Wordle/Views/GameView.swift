@@ -14,12 +14,10 @@ struct GameView: View {
             VStack {
                 Spacer()
                 VStack(spacing: 3) {
-                    GuessView(guess: $dm.guesses[0])
-                    GuessView(guess: $dm.guesses[1])
-                    GuessView(guess: $dm.guesses[2])
-                    GuessView(guess: $dm.guesses[3])
-                    GuessView(guess: $dm.guesses[4])
-                    GuessView(guess: $dm.guesses[5])
+                    ForEach(0...5, id: \.self) { index in
+                        GuessView(guess: $dm.guesses[index])
+                            .modifier(Shake(animatableData: CGFloat(dm.incorrectAttempts[index])))
+                    }
                 }
                 .frame(width: Global.boardWidth, height: 6 * Global.boardWidth / 5)
                 Spacer()
@@ -68,6 +66,5 @@ struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         GameView()
             .environmentObject(WordleDataModel())
-.previewInterfaceOrientation(.portraitUpsideDown)
     }
 }
