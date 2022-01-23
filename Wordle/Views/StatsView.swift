@@ -74,6 +74,22 @@ struct StatsView: View {
                         Spacer()
                     }
                 }
+                if dm.gameOver {
+                    HStack {
+                        Spacer()
+                        Button {
+                            dm.shareResult()
+                        } label: {
+                            HStack {
+                                Image(systemName: "square.and.arrow.up")
+                                Text("Share")
+                            }
+                            .foregroundColor(.white)
+                            .padding(8)
+                            .background(Color.correct)
+                        }
+                    }
+                }
             }
             Spacer()
         }
