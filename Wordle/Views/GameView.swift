@@ -10,6 +10,7 @@ import SwiftUI
 struct GameView: View {
     @EnvironmentObject var dm: WordleDataModel
     var body: some View {
+        ZStack {
         NavigationView {
             VStack {
                 Spacer()
@@ -26,14 +27,31 @@ struct GameView: View {
                     .padding(.top)
                 Spacer()
             }
+            .disabled(dm.showStats)
                 .navigationViewStyle(.stack)
                 .navigationBarTitleDisplayMode(.inline)
+                .overlay(alignment: .top) {
+                    if let toastText = dm.toastText {
+                        ToastView(toastText: toastText)
+                            .offset(y: 20)
+                    }
+                }
                 .toolbar {
                     ToolbarItem(placement: .navigationBarLeading) {
-                        Button {
-                            
-                        } label: {
-                            Image(systemName: "questionmark.circle")
+                        HStack {
+                            if !dm.inPlay {
+                                Button {
+                                    dm.newGame()
+                                } label: {
+                                    Text("New")
+                                        .foregroundColor(.primary)
+                                }
+                            }
+                            Button {
+                                
+                            } label: {
+                                Image(systemName: "questionmark.circle")
+                            }
                         }
                     }
                     ToolbarItem(placement: .principal) {
@@ -45,7 +63,9 @@ struct GameView: View {
                     ToolbarItem(placement: .navigationBarTrailing) {
                         HStack {
                             Button {
-                                
+                                withAnimation {
+                                    dm.showStats.toggle()
+                                }
                             } label: {
                                 Image(systemName: "chart.bar")
                             }
@@ -57,6 +77,10 @@ struct GameView: View {
                         }
                     }
                 }
+        }
+            if dm.showStats {
+                StatsView()
+            }
         }
         .navigationViewStyle(.stack)
     }

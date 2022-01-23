@@ -14,6 +14,9 @@
 		BB575189279928C700952D73 /* WordleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB575188279928C700952D73 /* WordleDataModel.swift */; };
 		BB57518B27992A4300952D73 /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57518A27992A4300952D73 /* Global.swift */; };
 		BB5BFE13279B8AE900FE62A9 /* FlipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5BFE12279B8AE900FE62A9 /* FlipView.swift */; };
+		BB6DDB0A279C957D0045712F /* ToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6DDB09279C957D0045712F /* ToastView.swift */; };
+		BB6DDB0C279CBD510045712F /* Statistic.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6DDB0B279CBD510045712F /* Statistic.swift */; };
+		BB6DDB10279D1FB40045712F /* StatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6DDB0F279D1FB40045712F /* StatsView.swift */; };
 		BBB2066A279A1E7C00D2D59B /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB20669279A1E7C00D2D59B /* LetterButtonView.swift */; };
 		BBB2066C279A20EE00D2D59B /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB2066B279A20EE00D2D59B /* Keyboard.swift */; };
 		BBFE0D702799097200E6813F /* WordleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE0D6F2799097200E6813F /* WordleApp.swift */; };
@@ -31,6 +34,9 @@
 		BB575188279928C700952D73 /* WordleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordleDataModel.swift; sourceTree = "<group>"; };
 		BB57518A27992A4300952D73 /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		BB5BFE12279B8AE900FE62A9 /* FlipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlipView.swift; sourceTree = "<group>"; };
+		BB6DDB09279C957D0045712F /* ToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastView.swift; sourceTree = "<group>"; };
+		BB6DDB0B279CBD510045712F /* Statistic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistic.swift; sourceTree = "<group>"; };
+		BB6DDB0F279D1FB40045712F /* StatsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatsView.swift; sourceTree = "<group>"; };
 		BBB20669279A1E7C00D2D59B /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		BBB2066B279A20EE00D2D59B /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		BBFE0D6C2799097200E6813F /* Wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +80,7 @@
 			children = (
 				BB575182279925FE00952D73 /* Guess.swift */,
 				BB57518A27992A4300952D73 /* Global.swift */,
+				BB6DDB0B279CBD510045712F /* Statistic.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -85,6 +92,8 @@
 				BB575185279926A600952D73 /* GuessView.swift */,
 				BBB20669279A1E7C00D2D59B /* LetterButtonView.swift */,
 				BBB2066B279A20EE00D2D59B /* Keyboard.swift */,
+				BB6DDB09279C957D0045712F /* ToastView.swift */,
+				BB6DDB0F279D1FB40045712F /* StatsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -212,6 +221,7 @@
 				BB5BFE13279B8AE900FE62A9 /* FlipView.swift in Sources */,
 				BBFE0D722799097200E6813F /* GameView.swift in Sources */,
 				BB575186279926A600952D73 /* GuessView.swift in Sources */,
+				BB6DDB0A279C957D0045712F /* ToastView.swift in Sources */,
 				BB575183279925FE00952D73 /* Guess.swift in Sources */,
 				BBB2066C279A20EE00D2D59B /* Keyboard.swift in Sources */,
 				BB575180279924DC00952D73 /* Color+Extension.swift in Sources */,
@@ -219,6 +229,8 @@
 				BB575189279928C700952D73 /* WordleDataModel.swift in Sources */,
 				BBFE0D702799097200E6813F /* WordleApp.swift in Sources */,
 				BB57518B27992A4300952D73 /* Global.swift in Sources */,
+				BB6DDB10279D1FB40045712F /* StatsView.swift in Sources */,
+				BB6DDB0C279CBD510045712F /* Statistic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
