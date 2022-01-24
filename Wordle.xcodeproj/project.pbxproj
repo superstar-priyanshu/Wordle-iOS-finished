@@ -20,6 +20,8 @@
 		BB6DDB12279DCB0B0045712F /* UIWindow+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6DDB11279DCB0B0045712F /* UIWindow+Extension.swift */; };
 		BB6DDB14279DF5000045712F /* ColorSchemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6DDB13279DF5000045712F /* ColorSchemeManager.swift */; };
 		BB6DDB16279DFFD80045712F /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6DDB15279DFFD80045712F /* SettingsView.swift */; };
+		BB6DDB18279E2E6D0045712F /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6DDB17279E2E6D0045712F /* HelpView.swift */; };
+		BB6DDB1B279F15E80045712F /* UbiquitousStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB6DDB1A279F15E80045712F /* UbiquitousStore.swift */; };
 		BBB2066A279A1E7C00D2D59B /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB20669279A1E7C00D2D59B /* LetterButtonView.swift */; };
 		BBB2066C279A20EE00D2D59B /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB2066B279A20EE00D2D59B /* Keyboard.swift */; };
 		BBFE0D702799097200E6813F /* WordleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBFE0D6F2799097200E6813F /* WordleApp.swift */; };
@@ -43,6 +45,9 @@
 		BB6DDB11279DCB0B0045712F /* UIWindow+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Extension.swift"; sourceTree = "<group>"; };
 		BB6DDB13279DF5000045712F /* ColorSchemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSchemeManager.swift; sourceTree = "<group>"; };
 		BB6DDB15279DFFD80045712F /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		BB6DDB17279E2E6D0045712F /* HelpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		BB6DDB19279F15C40045712F /* Wordle.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Wordle.entitlements; sourceTree = "<group>"; };
+		BB6DDB1A279F15E80045712F /* UbiquitousStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UbiquitousStore.swift; sourceTree = "<group>"; };
 		BBB20669279A1E7C00D2D59B /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
 		BBB2066B279A20EE00D2D59B /* Keyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
 		BBFE0D6C2799097200E6813F /* Wordle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordle.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +93,7 @@
 				BB575182279925FE00952D73 /* Guess.swift */,
 				BB57518A27992A4300952D73 /* Global.swift */,
 				BB6DDB0B279CBD510045712F /* Statistic.swift */,
+				BB6DDB1A279F15E80045712F /* UbiquitousStore.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -102,6 +108,7 @@
 				BB6DDB09279C957D0045712F /* ToastView.swift */,
 				BB6DDB0F279D1FB40045712F /* StatsView.swift */,
 				BB6DDB15279DFFD80045712F /* SettingsView.swift */,
+				BB6DDB17279E2E6D0045712F /* HelpView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -134,6 +141,7 @@
 		BBFE0D6E2799097200E6813F /* Wordle */ = {
 			isa = PBXGroup;
 			children = (
+				BB6DDB19279F15C40045712F /* Wordle.entitlements */,
 				BBFE0D6F2799097200E6813F /* WordleApp.swift */,
 				BB575181279925EA00952D73 /* Models */,
 				BB5751842799268C00952D73 /* Views */,
@@ -229,6 +237,7 @@
 				BBB2066A279A1E7C00D2D59B /* LetterButtonView.swift in Sources */,
 				BB5BFE13279B8AE900FE62A9 /* FlipView.swift in Sources */,
 				BB6DDB14279DF5000045712F /* ColorSchemeManager.swift in Sources */,
+				BB6DDB1B279F15E80045712F /* UbiquitousStore.swift in Sources */,
 				BBFE0D722799097200E6813F /* GameView.swift in Sources */,
 				BB575186279926A600952D73 /* GuessView.swift in Sources */,
 				BB6DDB16279DFFD80045712F /* SettingsView.swift in Sources */,
@@ -239,6 +248,7 @@
 				BB41F9F6279A88300070B56C /* Shake.swift in Sources */,
 				BB575189279928C700952D73 /* WordleDataModel.swift in Sources */,
 				BBFE0D702799097200E6813F /* WordleApp.swift in Sources */,
+				BB6DDB18279E2E6D0045712F /* HelpView.swift in Sources */,
 				BB6DDB12279DCB0B0045712F /* UIWindow+Extension.swift in Sources */,
 				BB57518B27992A4300952D73 /* Global.swift in Sources */,
 				BB6DDB10279D1FB40045712F /* StatsView.swift in Sources */,
@@ -370,6 +380,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Wordle/Wordle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordle/Preview Content\"";
@@ -401,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Wordle/Wordle.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Wordle/Preview Content\"";
