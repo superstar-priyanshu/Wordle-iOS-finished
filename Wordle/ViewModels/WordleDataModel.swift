@@ -221,9 +221,16 @@ class WordleDataModel: ObservableObject {
     
     func shareResult() {
         let stat = Statistic.loadStat()
+        let results = guesses.enumerated().compactMap { $0 }
+        var guessString = ""
+        for result in results {
+            if result.0 <= tryIndex {
+                guessString += result.1.results + "\n"
+            }
+        }
         let resultString = """
 Wordle \(stat.games) \(tryIndex < 6 ? "\(tryIndex + 1)/6" : "")
-\(guesses.compactMap{$0.results}.joined(separator: "\n"))
+\(guessString)
 """
         print(resultString)
         let activityController = UIActivityViewController(activityItems: [resultString], applicationActivities: nil)
