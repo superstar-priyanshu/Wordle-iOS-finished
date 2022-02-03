@@ -179,7 +179,7 @@ class WordleDataModel: ObservableObject {
                 && guesses[tryIndex].bgColors[index] != .correct
                 && frequency[guessLetter]! > 0 {
                 guesses[tryIndex].bgColors[index] = .misplaced
-                if !misplacedLetters.contains(guessLetter) {
+                if !misplacedLetters.contains(guessLetter) && !matchedLetters.contains(guessLetter) {
                     misplacedLetters.append(guessLetter)
                     keyColors[guessLetter] = .misplaced
                 }
